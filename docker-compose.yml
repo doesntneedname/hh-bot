@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  hh-integration:
+    build: .
+    container_name: hh_integration
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./cache:/app/cache
+    restart: always
